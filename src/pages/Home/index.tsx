@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
 import { Container } from './styles';
+import Card from '../../components/Card';
 
 const menuItens = [
   {
@@ -33,7 +34,9 @@ const Home: React.FC = () => {
       {/* <Button>Página do curso</Button> */}
       <Container>
         <h1>Home</h1>
+        <Card />
       </Container>
+
       <Footer />
     </>
   );
