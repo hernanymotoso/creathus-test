@@ -3,6 +3,7 @@ import { v4 as uuidV4 } from 'uuid';
 
 import Header from '../../components/Header';
 import Button from '../../components/Button';
+import Footer from '../../components/Footer';
 import { Container } from './styles';
 
 const menuItens = [
@@ -29,10 +30,11 @@ const Home: React.FC = () => {
   return (
     <>
       <Header menuItens={menuItens} />
-      <Button>Página do curso</Button>
+      {/* <Button>Página do curso</Button> */}
       <Container>
         <h1>Home</h1>
       </Container>
+      <Footer />
     </>
   );
 };
