@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { Container, Header, Content } from './styles';
 import oceanAndroid from '../../assets/images/oceanAndroid.svg';
@@ -9,14 +9,27 @@ import oceanUser from '../../assets/images/oceanUser.svg';
 import oceanMarker from '../../assets/images/oceanMarker.svg';
 
 import AboutClass from './AboutClass';
-
 import Button from '../Button';
 
 const Card: React.FC = () => {
-  console.log();
+  const [aboutClassActive, setAboutClassActive] = useState(false);
+  // const t = useCallback(() => {
+  //   console.log();
+
+  //   const aboutClassContentElement =
+  //     document.getElementById('aboutClassContent');
+  //   if (!aboutClassActive) {
+  //     aboutClassContentElement.setAttribute('style', 'height:0px');
+  //   }
+  // }, [aboutClassActive]);
 
   return (
-    <Container>
+    <Container
+      onMouseEnter={() => setAboutClassActive(!aboutClassActive)}
+      onMouseLeave={() => {
+        setAboutClassActive(!aboutClassActive);
+      }}
+    >
       <div>
         <Header>
           <span>
@@ -61,11 +74,7 @@ const Card: React.FC = () => {
                 src={oceanBook}
                 alt="icone de livro, onde referencia a quantidade de aulas"
               />
-              <p>
-                3 AULAS
-                <br />
-                {/* <strong>12/01 às 16:00</strong> */}
-              </p>
+              <p>3 AULAS</p>
             </div>
             <div className="right">
               <img
@@ -114,7 +123,8 @@ const Card: React.FC = () => {
           <Button>Página do curso</Button>
         </Content>
       </div>
-      <AboutClass />
+
+      <AboutClass aboutClassActive={aboutClassActive} />
     </Container>
   );
 };

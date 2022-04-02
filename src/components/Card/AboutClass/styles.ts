@@ -1,19 +1,33 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface IContainerProps {
+  aboutClassActive: boolean;
+}
+interface IContentProps {
+  contentHeight?: number;
+}
+
+export const Container = styled.div<IContainerProps>`
   width: 100%;
-  /* background-color: #787cff; */
-  z-index: -1;
   position: relative;
-  transition: margin 1s;
-
-  margin-top: -200px;
+  transition: all 0.5s;
   padding-top: 10px;
-
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
-
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  margin-top: -90px;
+
+  ${props =>
+    props.aboutClassActive &&
+    css`
+      margin-top: -10px;
+      opacity: 1;
+      visibility: visible;
+    `}
 `;
 
 export const Title = styled.div`
@@ -32,79 +46,88 @@ export const Title = styled.div`
     height: 30px;
     width: 25px;
     color: #464646;
+    cursor: pointer;
   }
 `;
-export const Content = styled.div`
-  padding: 0px 16px 18px 16px;
+export const Content = styled.div<IContentProps>`
+  overflow: hidden;
+  transition: height 1s;
+
+  height: ${props =>
+    props.contentHeight ? `${props.contentHeight}px` : '0px'};
 
   > .Content__Container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    padding: 0px 16px 18px 16px;
 
-    width: 100%;
-
-    & + .Content__Container {
-      margin-top: 25px;
-    }
-
-    > .Content___top {
+    > .Content__single {
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      padding: 0 10px;
-      margin-bottom: 10px;
+      align-items: center;
+      flex-direction: column;
 
-      > span {
+      width: 100%;
+
+      & + .Content__single {
+        margin-top: 25px;
+      }
+
+      > .Content___top {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        /* background-color: red; */
-        flex: 5;
-        > img {
-          margin-right: 10px;
-          width: 18px;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 10px;
+
+        > span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* background-color: red; */
+          flex: 5;
+          > img {
+            margin-right: 10px;
+            width: 18px;
+          }
+
+          > p {
+            font-size: 12px;
+            font-weight: 500;
+            color: #464646;
+            flex: 5;
+          }
         }
 
         > p {
           font-size: 12px;
           font-weight: 500;
           color: #464646;
-          flex: 5;
         }
       }
-
-      > p {
-        font-size: 12px;
-        font-weight: 500;
-        color: #464646;
-      }
-    }
-    > .Content___bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      height: 44px;
-
-      border-radius: 14px;
-      background-color: #fafafa;
-
-      padding: 0 18px;
-
-      > p {
-        font-weight: 500;
-        color: #464646;
-      }
-      > span {
+      > .Content___bottom {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
+        height: 44px;
 
-        > img {
-          margin-right: 8px;
-          width: 20px;
+        border-radius: 14px;
+        background-color: #fafafa;
+
+        padding: 0 18px;
+
+        > p {
+          font-weight: 500;
+          color: #464646;
+        }
+        > span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          > img {
+            margin-right: 8px;
+            width: 20px;
+          }
         }
       }
     }

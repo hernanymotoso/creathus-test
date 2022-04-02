@@ -2,14 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 275px;
-  /* height: 436px; */
   border-radius: 10px;
-  /* z-index: 1; */
-
   margin: 0 auto;
   margin-bottom: 20px;
-
-  /* background-color: #787cff; */
 
   > div:first-child {
     width: 100%;
@@ -26,9 +21,7 @@ export const Header = styled.div`
   height: 126px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-
   padding: 18px 16px;
-
   background-color: #f5fcff;
 
   > span {
@@ -58,24 +51,14 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-
   padding: 18px 16px;
-
-  > hr {
-    height: 1px;
-    margin: 18px 0;
-
-    background-color: rgba(0, 0, 0, 0.06);
-  }
 
   > div {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border-bottom: #464646;
-    /* background: #787cff; */
     width: 100%;
-    /* height: 100px; */
 
     > .left {
       margin-right: 10px;
@@ -112,11 +95,15 @@ export const Content = styled.div`
     align-items: center;
     height: 26px;
     border-radius: 14px;
-
     font-size: 10px;
     background-color: #ffeba3;
     color: #464646;
-
     margin-bottom: 18px;
+  }
+
+  > hr {
+    height: 1px;
+    margin: 18px 0;
+    background-color: rgba(0, 0, 0, 0.06);
   }
 `;
