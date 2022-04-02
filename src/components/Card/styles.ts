@@ -4,13 +4,19 @@ export const Container = styled.div`
   width: 275px;
   /* height: 436px; */
   border-radius: 10px;
+  /* z-index: 1; */
 
   margin: 0 auto;
   margin-bottom: 20px;
 
   /* background-color: #787cff; */
 
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  > div:first-child {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+  }
 `;
 
 export const Header = styled.div`
