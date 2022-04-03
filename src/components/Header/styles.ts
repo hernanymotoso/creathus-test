@@ -12,6 +12,7 @@ export const Center = styled.div`
   max-width: 1194px;
   padding: 0 20px;
   height: 100%;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;

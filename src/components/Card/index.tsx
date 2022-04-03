@@ -11,17 +11,14 @@ import oceanMarker from '../../assets/images/oceanMarker.svg';
 import AboutClass from './AboutClass';
 import Button from '../Button';
 
-const Card: React.FC = () => {
-  const [aboutClassActive, setAboutClassActive] = useState(false);
-  // const t = useCallback(() => {
-  //   console.log();
+import { ICourseResponse } from '../../pages/Home';
 
-  //   const aboutClassContentElement =
-  //     document.getElementById('aboutClassContent');
-  //   if (!aboutClassActive) {
-  //     aboutClassContentElement.setAttribute('style', 'height:0px');
-  //   }
-  // }, [aboutClassActive]);
+interface ICardProps {
+  course: ICourseResponse;
+}
+
+const Card: React.FC<ICardProps> = ({ course }) => {
+  const [aboutClassActive, setAboutClassActive] = useState(false);
 
   return (
     <Container
@@ -34,14 +31,14 @@ const Card: React.FC = () => {
         <Header>
           <span>
             <p>
-              TRILHA <strong>ANDROID</strong>
+              TRILHA <strong>{course.track.toLocaleUpperCase()}</strong>
             </p>
             <img
               src={oceanAndroid}
               alt="icone oceanAndroid no card, para referenciar que o curso é sobre android"
             />
           </span>
-          <h2>WebServices com Retrofit e Imagens Glide</h2>
+          <h2>{course.title}</h2>
         </Header>
         <Content>
           <div>
@@ -74,7 +71,7 @@ const Card: React.FC = () => {
                 src={oceanBook}
                 alt="icone de livro, onde referencia a quantidade de aulas"
               />
-              <p>3 AULAS</p>
+              <p>{course.events.length} AULAS</p>
             </div>
             <div className="right">
               <img
@@ -99,14 +96,17 @@ const Card: React.FC = () => {
                   lineHeight: '11px',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center',
+                  alignItems: 'start',
                   flexDirection: 'column',
                   fontSize: '9px',
                 }}
               >
-                <p>PAULO SALVATORE,</p>
+                {course.speakers.map(speak => (
+                  <p>{speak}</p>
+                ))}
+                {/* <p>PAULO SALVATORE,</p>
                 <p>MARIA DA BAHIA E</p>
-                <p>JOÃO DO PEDREG...</p>
+                <p>JOÃO DO PEDREG...</p> */}
               </p>
             </div>
             <div className="right">
@@ -114,7 +114,9 @@ const Card: React.FC = () => {
                 src={oceanMarker}
                 alt="icone de Marcação, onde referencia o local do curso"
               />
-              <p style={{ lineHeight: '12px' }}>CAMPUS MANAUS</p>
+              <p style={{ lineHeight: '12px' }}>
+                {course.campus.toLocaleUpperCase()}
+              </p>
             </div>
           </div>
           <hr />
