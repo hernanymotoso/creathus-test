@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Container, Header, Content } from './styles';
 import oceanAndroid from '../../assets/images/oceanAndroid.svg';
@@ -95,7 +96,7 @@ const Card: React.FC<ICardProps> = ({ course }) => {
                 src={oceanUser}
                 alt="icone de pessoa, onde referência os oradores da aulas"
               />
-              <p
+              <span
                 style={{
                   lineHeight: '11px',
                   display: 'flex',
@@ -103,6 +104,7 @@ const Card: React.FC<ICardProps> = ({ course }) => {
                   alignItems: 'start',
                   flexDirection: 'column',
                   fontSize: '9px',
+                  color: '#464646',
                 }}
               >
                 {course.speakers.map(speak => (
@@ -111,7 +113,7 @@ const Card: React.FC<ICardProps> = ({ course }) => {
                 {/* <p>PAULO SALVATORE,</p>
                 <p>MARIA DA BAHIA E</p>
                 <p>JOÃO DO PEDREG...</p> */}
-              </p>
+              </span>
             </div>
             <div className="right">
               <img
@@ -130,7 +132,12 @@ const Card: React.FC<ICardProps> = ({ course }) => {
             INSCRIÇÕES A PARTIR DE{' '}
             {formatDate(course.enrollmentsStart, 'dd/MM')}
           </span>
-          <Button>Página do curso</Button>
+          <Button
+            // eslint-disable-next-line no-return-assign
+            onClick={() => (window.location.href = `${course.detailsURL}`)}
+          >
+            Página do curso
+          </Button>
         </Content>
       </div>
 
