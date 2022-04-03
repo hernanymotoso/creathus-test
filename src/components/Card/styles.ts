@@ -5,6 +5,7 @@ export const Container = styled.div`
   border-radius: 10px;
   margin: 0 auto;
   margin-bottom: 20px;
+  background-color: #fff;
 
   > div:first-child {
     width: 100%;
