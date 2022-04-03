@@ -9,11 +9,13 @@ import Footer from '../../components/Footer';
 import { Container } from './styles';
 import Card from '../../components/Card';
 
-interface IEvent {
+import { formatDate, getAmountTimeForEvents } from '../../helpers/DateFormat';
+
+export interface IEvent {
   id: string;
   courseId: string;
   title: string;
-  strartTime: string;
+  startTime: string;
   endTime: string;
   certificate?: boolean;
 }
@@ -22,7 +24,7 @@ export interface ICourseResponse {
   id: string;
   track: string;
   title: string;
-  strartTime: string;
+  startTime: string;
   endDate: string;
   campus: string;
   speakers: string[];
@@ -50,7 +52,6 @@ const menuItens = [
 ];
 
 const Home: React.FC = () => {
-  console.log('Home-page');
   const [courses, setCourses] = useState<ICourseResponse[]>(
     [] as ICourseResponse[],
   );
@@ -62,15 +63,18 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
+    const date = '2022-05-05T22:30:00.000Z';
+    formatDate(date, "dd/MM 'às' H:mm");
+    getAmountTimeForEvents(courses[1]?.events);
+
     api
       .get<ICourseResponse[]>('/courses?_embed=events')
       .then(response => {
         setCourses(response.data);
-        console.log('@HOME_PAGE Courses', response.data);
       })
       .catch(err => console.log('@HOME-PAGE  error API-request=', err));
   }, []);
-  console.log('@COURSES', courses.length);
+
   return (
     <>
       <Header menuItens={menuItens} />

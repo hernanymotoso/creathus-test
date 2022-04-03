@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Container, Header, Content } from './styles';
 import oceanAndroid from '../../assets/images/oceanAndroid.svg';
@@ -7,6 +7,8 @@ import oceanBook from '../../assets/images/oceanBook.svg';
 import oceanClock from '../../assets/images/oceanClock.svg';
 import oceanUser from '../../assets/images/oceanUser.svg';
 import oceanMarker from '../../assets/images/oceanMarker.svg';
+
+import { formatDate, getAmountTimeForEvents } from '../../helpers/DateFormat';
 
 import AboutClass from './AboutClass';
 import Button from '../Button';
@@ -35,7 +37,7 @@ const Card: React.FC<ICardProps> = ({ course }) => {
             </p>
             <img
               src={oceanAndroid}
-              alt="icone oceanAndroid no card, para referenciar que o curso é sobre android"
+              alt="icone oceanAndroid no card, para referênciar que o curso é sobre android"
             />
           </span>
           <h2>{course.title}</h2>
@@ -45,21 +47,23 @@ const Card: React.FC<ICardProps> = ({ course }) => {
             <div className="left">
               <img
                 src={oceanCalendar}
-                alt="icone de calendario, onde referencia o inicio do curso"
+                alt="icone de calendario, onde referência o início do curso"
               />
               <p>
                 INÍCIO EM <br />
-                <strong>12/01 às 16:00</strong>
+                <strong>
+                  {formatDate(course.startTime, "dd/MM 'às' H:mm")}
+                </strong>
               </p>
             </div>
             <div className="right">
               <img
                 src={oceanCalendar}
-                alt="icone de calendario, onde referencia o término do curso"
+                alt="icone de calendário, onde referência o término do curso"
               />
               <p>
                 TÉRMINO <br />
-                <strong>16/01</strong>
+                <strong>{formatDate(course.startTime, 'dd/MM')}</strong>
               </p>
             </div>
           </div>
@@ -69,17 +73,17 @@ const Card: React.FC<ICardProps> = ({ course }) => {
             <div className="left">
               <img
                 src={oceanBook}
-                alt="icone de livro, onde referencia a quantidade de aulas"
+                alt="icone de livro, onde referência a quantidade de aulas"
               />
               <p>{course.events.length} AULAS</p>
             </div>
             <div className="right">
               <img
                 src={oceanClock}
-                alt="icone de relógio, onde referencia o total de horas de curso"
+                alt="icone de relógio, onde referência o total de horas de curso"
               />
               <p style={{ lineHeight: '10px' }}>
-                12H <br />
+                {getAmountTimeForEvents(course.events)}H <br />
                 <strong style={{ fontSize: '9px' }}>TOTAL</strong>
               </p>
             </div>
@@ -89,7 +93,7 @@ const Card: React.FC<ICardProps> = ({ course }) => {
             <div className="left">
               <img
                 src={oceanUser}
-                alt="icone de livro, onde referencia a quantidade de aulas"
+                alt="icone de pessoa, onde referência os oradores da aulas"
               />
               <p
                 style={{
@@ -102,7 +106,7 @@ const Card: React.FC<ICardProps> = ({ course }) => {
                 }}
               >
                 {course.speakers.map(speak => (
-                  <p>{speak}</p>
+                  <p key={speak}>{speak}</p>
                 ))}
                 {/* <p>PAULO SALVATORE,</p>
                 <p>MARIA DA BAHIA E</p>
@@ -112,7 +116,7 @@ const Card: React.FC<ICardProps> = ({ course }) => {
             <div className="right">
               <img
                 src={oceanMarker}
-                alt="icone de Marcação, onde referencia o local do curso"
+                alt="icone de marcação, onde referência o local do curso"
               />
               <p style={{ lineHeight: '12px' }}>
                 {course.campus.toLocaleUpperCase()}
@@ -121,12 +125,16 @@ const Card: React.FC<ICardProps> = ({ course }) => {
           </div>
           <hr />
 
-          <span> INSCRIÇÕES A PARTIR DE 11/01</span>
+          <span>
+            {' '}
+            INSCRIÇÕES A PARTIR DE{' '}
+            {formatDate(course.enrollmentsStart, 'dd/MM')}
+          </span>
           <Button>Página do curso</Button>
         </Content>
       </div>
 
-      <AboutClass aboutClassActive={aboutClassActive} />
+      <AboutClass aboutClassActive={aboutClassActive} events={course.events} />
     </Container>
   );
 };

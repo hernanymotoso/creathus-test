@@ -1,16 +1,28 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+import ptBR from 'date-fns/locale/pt-BR';
 import oceanCalendar from '../../../assets/images/oceanCalendar.svg';
 import oceanCertificate from '../../../assets/images/oceanCertificate.svg';
 import oceanClockBlack from '../../../assets/images/oceanClockBlack.svg';
 import { Container, Title, Content } from './styles';
 
+import {
+  formatDate,
+  getAmountTimeForEvents,
+} from '../../../helpers/DateFormat';
+
+import { IEvent } from '../../../pages/Home';
+
 interface IAboutClassProps {
   aboutClassActive?: boolean;
+  events: IEvent[];
 }
 
-const AboutClass: React.FC<IAboutClassProps> = ({ aboutClassActive }) => {
+const AboutClass: React.FC<IAboutClassProps> = ({
+  aboutClassActive,
+  events,
+}) => {
   const [aboutClassDownActive, setAboutClassDownActive] = useState(false);
   const [contentHeight, setContentHeight] = useState<number>(0);
 
@@ -50,63 +62,41 @@ const AboutClass: React.FC<IAboutClassProps> = ({ aboutClassActive }) => {
           // onMouseLeave={() => handleDropDownAboutClass()}
         >
           <div ref={contentContainerRef} className="Content__Container">
-            <div className="Content__single">
-              <div className="Content___top">
-                <span>
-                  <img
-                    src={oceanCalendar}
-                    alt="icone de calendario, onde referencia o inicio do curso"
-                  />
-                  <p>04 DE FEVEREIRO</p>
-                </span>
-                <p>18:30 - 22:30</p>
+            {events.map(event => (
+              <div key={event.id} className="Content__single">
+                <div className="Content___top">
+                  <span>
+                    <img
+                      src={oceanCalendar}
+                      alt="icone de calendário, onde referência o início do curso"
+                    />
+                    <p>
+                      {formatDate(
+                        event.startTime,
+                        "dd' DE 'MMMM",
+                        ptBR,
+                      ).toLocaleUpperCase()}
+                    </p>
+                  </span>
+                  <p>
+                    {formatDate(event.startTime, 'HH:mm')} -{' '}
+                    {formatDate(event.endTime, 'HH:mm')}
+                  </p>
+                </div>
+                <div className="Content___bottom">
+                  <p>{event.title}</p>
+                  <span>
+                    <img
+                      src={
+                        event.certificate ? oceanCertificate : oceanClockBlack
+                      }
+                      alt=""
+                    />
+                    {getAmountTimeForEvents([event])}h
+                  </span>
+                </div>
               </div>
-              <div className="Content___bottom">
-                <p>Parte 1</p>
-                <span>
-                  <img src={oceanCertificate} alt="" />
-                  3h
-                </span>
-              </div>
-            </div>
-            <div className="Content__single">
-              <div className="Content___top">
-                <span>
-                  <img
-                    src={oceanCalendar}
-                    alt="icone de calendario, onde referencia o inicio do curso"
-                  />
-                  <p>04 DE FEVEREIRO</p>
-                </span>
-                <p>18:30 - 22:30</p>
-              </div>
-              <div className="Content___bottom">
-                <p>Sessão tira-dúvidas</p>
-                <span>
-                  <img src={oceanClockBlack} alt="" />
-                  1h
-                </span>
-              </div>
-            </div>
-            <div className="Content__single">
-              <div className="Content___top">
-                <span>
-                  <img
-                    src={oceanCalendar}
-                    alt="icone de calendario, onde referencia o inicio do curso"
-                  />
-                  <p>06 DE FEVEREIRO</p>
-                </span>
-                <p>18:30 - 22:30</p>
-              </div>
-              <div className="Content___bottom">
-                <p>Parte 1</p>
-                <span>
-                  <img src={oceanCertificate} alt="" />
-                  3h
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
         </Content>
       )}
