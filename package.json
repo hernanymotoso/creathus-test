@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port $PORT",
     "dev:server": "node ./server.js",
     "build": "tsc && vite build",
     "start": "vite preview",
