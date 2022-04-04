@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 275px;
+
   border-radius: 10px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -12,6 +13,10 @@ export const Container = styled.div`
     border-radius: 10px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
     background-color: #fff;
+  }
+
+  @media screen and (max-width: 281px) {
+    width: 235px;
   }
 `;
 
@@ -64,6 +69,15 @@ export const Content = styled.div`
     > .left {
       margin-right: 10px;
       flex: 6;
+
+      > span {
+        > p {
+          width: 85px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
     }
     > .right {
       flex: 4;

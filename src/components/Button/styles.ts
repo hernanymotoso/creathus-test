@@ -23,4 +23,8 @@ export const Container = styled.button<IContainerProps>`
     background: ${props =>
       props.bgColor ? shade(0.1, `#${props.bgColor}`) : shade(0.1, '#00b9ff')};
   }
+
+  @media screen and (max-width: 281px) {
+    width: 203px;
+  }
 `;

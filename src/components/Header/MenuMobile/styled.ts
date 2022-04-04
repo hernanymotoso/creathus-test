@@ -6,9 +6,12 @@ interface INavMenuProps {
 }
 
 export const Container = styled.div`
-  position: relative;
+  position: absolute;
   visibility: hidden;
   display: none;
+  top: 18px;
+  left: 18px;
+  /* width: 0px; */
   > svg {
     cursor: pointer;
   }
@@ -20,13 +23,13 @@ export const Container = styled.div`
 `;
 export const NavMenu = styled.nav<INavMenuProps>`
   list-style: none;
-  top: 0;
-  right: -400px;
+  /* top: 0;
+  right: 0px; */
   position: absolute;
   background-color: #00b9ff;
   transition: all 1s;
 
-  /* margin-right: -400px; */
+  margin-left: -400px;
   visibility: hidden;
   display: none;
   opacity: 0;
@@ -34,19 +37,22 @@ export const NavMenu = styled.nav<INavMenuProps>`
   ${props =>
     props.menuActive &&
     css`
-      right: -20px;
+      margin-left: -20px;
       visibility: visible;
       display: unset;
       opacity: 1;
     `}
 
-  margin-top: -19px;
+  margin-top: -45px;
 
   display: flex;
 
   flex-direction: column;
   height: 100vh;
   width: 350px;
+  @media screen and (max-width: 281px) {
+    width: 250px;
+  }
 
   > li {
     margin: 0 auto;
@@ -80,8 +86,8 @@ export const NavMenu = styled.nav<INavMenuProps>`
   }
 
   > svg {
-    margin-left: auto;
-    margin-right: 30px;
+    margin-right: auto;
+    margin-left: 18px;
     margin-top: 10px;
     color: #fff;
     cursor: pointer;

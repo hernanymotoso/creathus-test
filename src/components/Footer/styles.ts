@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
   width: 100%;
-  height: 300px;
+  height: 360px;
   background-color: #ececec;
 
-  margin-top: 80px;
+  margin-top: 60px;
 `;
 
 export const Center = styled.div`

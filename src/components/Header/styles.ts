@@ -13,10 +13,15 @@ export const Center = styled.div`
   padding: 0 20px;
   height: 100%;
   margin: 0 auto;
+  position: relative;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 560px) {
+    justify-content: center;
+  }
 
   > span {
     @media screen and (max-width: 560px) {

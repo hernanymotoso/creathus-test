@@ -34,6 +34,11 @@ export const Container = styled.div<IContainerProps>`
   }
 
   /* Style my items */
+
+  .my-masonry-grid_column {
+    /* padding-left: 30px; gutter size */
+    background-clip: padding-box;
+  }
   .my-masonry-grid_column > div {
     margin-bottom: 30px;
   }

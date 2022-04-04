@@ -32,7 +32,7 @@ describe('MenuMobile component', () => {
     expect(menuMobile.getAttribute('aria-hidden')).toBe('true');
     expect(menuMobile).toHaveStyle({ opacity: 0 });
     expect(menuMobile).toHaveStyle({ visibility: 'hidden' });
-    expect(menuMobile).toHaveStyle({ right: '-400px' });
+    expect(menuMobile).toHaveStyle({ marginLeft: '-400px' });
     // expect(menuMobile).toHaveStyle({ display: 'none' });
 
     // Click on open button to verify if it open
@@ -40,13 +40,13 @@ describe('MenuMobile component', () => {
     expect(menuMobile.getAttribute('aria-hidden')).toBe('false');
     expect(menuMobile).toHaveStyle({ opacity: 1 });
     expect(menuMobile).toHaveStyle({ visibility: 'visible' });
-    expect(menuMobile).toHaveStyle({ right: '-20px' });
+    expect(menuMobile).toHaveStyle({ marginLeft: '-20px' });
 
     // Click on open button to verify if it close
     fireEvent.click(screen.getByLabelText(/close menu/i));
     expect(menuMobile.getAttribute('aria-hidden')).toBe('true');
     expect(menuMobile).toHaveStyle({ opacity: 0 });
     expect(menuMobile).toHaveStyle({ visibility: 'hidden' });
-    expect(menuMobile).toHaveStyle({ right: '-400px' });
+    expect(menuMobile).toHaveStyle({ marginLeft: '-400px' });
   });
 });
