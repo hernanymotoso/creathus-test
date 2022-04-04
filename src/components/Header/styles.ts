@@ -19,6 +19,10 @@ export const Center = styled.div`
   justify-content: space-between;
 
   > span {
+    @media screen and (max-width: 560px) {
+      visibility: hidden;
+      display: none;
+    }
     > strong {
       color: #004098;
       cursor: pointer;
@@ -36,8 +40,16 @@ export const Nav = styled.ul`
   list-style: none;
 
   > li {
+    @media screen and (max-width: 560px) {
+      visibility: hidden;
+      display: none;
+    }
     & + li {
-      margin-left: 20px;
+      margin-left: 80px;
+
+      @media screen and (max-width: 680px) {
+        margin-left: 50px;
+      }
     }
 
     > a {

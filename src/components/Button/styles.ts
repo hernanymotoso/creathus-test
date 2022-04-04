@@ -16,10 +16,11 @@ export const Container = styled.button<IContainerProps>`
   color: #fff;
 
   // if don't have bgColor, we set #00b9ff by default
-  background-color: ${props => (props.bgColor ? props.bgColor : '#00b9ff')};
+  background-color: ${props =>
+    props.bgColor ? `#${props.bgColor}` : '#00b9ff'};
 
   &:hover {
     background: ${props =>
-      props.bgColor ? shade(0.1, props.bgColor) : shade(0.1, '#00b9ff')};
+      props.bgColor ? shade(0.1, `#${props.bgColor}`) : shade(0.1, '#00b9ff')};
   }
 `;

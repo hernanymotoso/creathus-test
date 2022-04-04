@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { v4 as uuidV4 } from 'uuid';
 import Masonry from 'react-masonry-css';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -9,7 +9,7 @@ import Footer from '../../components/Footer';
 import { Container } from './styles';
 import Card from '../../components/Card';
 
-import { formatDate, getAmountTimeForEvents } from '../../helpers/DateFormat';
+import Button from '../../components/Button';
 
 export interface IEvent {
   id: string;
@@ -55,18 +55,28 @@ const Home: React.FC = () => {
   const [courses, setCourses] = useState<ICourseResponse[]>(
     [] as ICourseResponse[],
   );
-
+  const [currentcourses, setCurrentcourses] = useState<ICourseResponse[]>(
+    [] as ICourseResponse[],
+  );
+  const [isFourItens, setIsFourItens] = useState(true);
+  const [contentHeight, setContentHeight] = useState<number>();
   const breakpoints = {
     default: 4,
     1100: 2,
     720: 1,
   };
 
-  useEffect(() => {
-    const date = '2022-05-05T22:30:00.000Z';
-    formatDate(date, "dd/MM 'às' H:mm");
-    getAmountTimeForEvents(courses[1]?.events);
+  const showFourItems = useCallback(() => {
+    const newCursers = courses.filter((item, index) => index < 4);
+    setCurrentcourses(newCursers);
+    setIsFourItens(true);
+  }, [courses]);
+  const showAllItens = useCallback(() => {
+    setCurrentcourses(courses);
+    setIsFourItens(false);
+  }, [courses]);
 
+  useEffect(() => {
     api
       .get<ICourseResponse[]>('/courses?_embed=events')
       .then(response => {
@@ -75,13 +85,16 @@ const Home: React.FC = () => {
       .catch(err => console.log('@HOME-PAGE  error API-request=', err));
   }, []);
 
+  useEffect(() => {
+    showFourItems();
+  }, [showFourItems]);
+
   return (
     <>
       <Header menuItens={menuItens} />
-      <Container>
+      <Container id="ddContainer">
         <h1>Cursos</h1>
-
-        {courses.length === 0 ? (
+        {currentcourses.length === 0 ? (
           <CircularProgress />
         ) : (
           <Masonry
@@ -89,11 +102,17 @@ const Home: React.FC = () => {
             className="my-masonry-grid"
             // columnClassName="my-masonry-grid_column"
           >
-            {courses.map(course => (
+            {currentcourses.map(course => (
               <Card key={course.id} course={course} />
             ))}
           </Masonry>
         )}
+        <Button
+          onClick={isFourItens ? () => showAllItens() : () => showFourItems()}
+          bgColor="F8F8F8"
+        >
+          {isFourItens ? 'Ver tudo' : 'Ver menos'}
+        </Button>
       </Container>
 
       <Footer />

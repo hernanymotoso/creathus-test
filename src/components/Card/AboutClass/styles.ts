@@ -13,13 +13,14 @@ export const Container = styled.div<IContainerProps>`
   transition: all 0.5s;
   padding-top: 10px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   opacity: 0;
   overflow: hidden;
   visibility: hidden;
-  margin-top: -90px;
+  margin-top: -60px;
+  margin-bottom: 20px;
 
   ${props =>
     props.aboutClassActive &&
@@ -35,7 +36,7 @@ export const Title = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: 25px 16px;
+  padding: 10px 16px;
 
   > p {
     padding: 0 10px;
