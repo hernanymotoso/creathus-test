@@ -6,8 +6,7 @@
     "dev": "vite",
     "dev:server": "node ./server.js",
     "build": "tsc && vite build",
-    "start": "vite",
-    "preview": "vite preview",
+    "start": "vite preview --port=3000",
     "commit": "cz",
     "test": "jest --watchAll"
   },
