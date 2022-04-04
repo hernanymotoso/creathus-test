@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import AboutClass from '../index';
 
 const events = [
@@ -29,16 +29,36 @@ const events = [
 ];
 describe('AboutClass component', () => {
   it('should render the AboutClass component with events informations', () => {
-    const { getByText } = render(<AboutClass events={events} />);
+    render(<AboutClass events={events} aboutClassActive />);
 
-    // expect(getByText('05 DE MAIO')).toBeInTheDocument();
-    // expect(getByText('19:30 - 22:30')).toBeInTheDocument();
-    // expect(getByText('Parte 1')).toBeInTheDocument();
-    // expect(getByText('3h')).toBeInTheDocument();
-    // expect(getByText('07 DE MAIO')).toBeInTheDocument();
-    // expect(getByText('Parte 2')).toBeInTheDocument();
-    // expect(getByText('06 DE MAIO')).toBeInTheDocument();
-    // expect(getByText('Sessão tira dúvidas')).toBeInTheDocument();
-    // expect(getByText('1h')).toBeInTheDocument();
+    // get about Class
+    const aboutClass = screen.getByRole('main', { hidden: true });
+
+    // check if the about class is visible
+    expect(aboutClass.getAttribute('aria-hidden')).toBe('false');
+    expect(aboutClass).toHaveStyle({ opacity: 1 });
+    expect(aboutClass).toHaveStyle({ visibility: 'visible' });
+
+    expect(screen.getByText('05 DE MAIO')).toBeInTheDocument();
+    // expect(screen.getByText('19:30 - 22:30')).toBeInTheDocument();
+    expect(screen.getByText('Parte 1')).toBeInTheDocument();
+    // expect(screen.getByText('3h')).toBeInTheDocument();
+    expect(screen.getByText('07 DE MAIO')).toBeInTheDocument();
+    expect(screen.getByText('Parte 2')).toBeInTheDocument();
+    expect(screen.getByText('06 DE MAIO')).toBeInTheDocument();
+    expect(screen.getByText('Sessão tira dúvidas')).toBeInTheDocument();
+    expect(screen.getByText('1h')).toBeInTheDocument();
+  });
+
+  it('should not render the AboutClass component', () => {
+    render(<AboutClass events={events} aboutClassActive={false} />);
+
+    // get about Class
+    const aboutClass = screen.getByRole('main', { hidden: true });
+
+    // check if the about class is not visible
+    expect(aboutClass.getAttribute('aria-hidden')).toBe('true');
+    expect(aboutClass).toHaveStyle({ opacity: 0 });
+    expect(aboutClass).toHaveStyle({ visibility: 'hidden' });
   });
 });

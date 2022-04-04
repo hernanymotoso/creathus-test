@@ -25,6 +25,7 @@ const Card: React.FC<ICardProps> = ({ course }) => {
 
   return (
     <Container
+      aria-label="Enter About Class"
       onMouseEnter={() => setAboutClassActive(!aboutClassActive)}
       onMouseLeave={() => {
         setAboutClassActive(!aboutClassActive);

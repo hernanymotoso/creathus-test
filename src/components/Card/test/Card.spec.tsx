@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Card from '../index';
 
 const course = {
@@ -40,6 +40,26 @@ const course = {
 };
 
 describe('Card component', () => {
+  it('should be show or hidden the about class component when mouse enter or mouse leave on card component', () => {
+    render(<Card course={course} />);
+
+    const aboutClass = screen.getByRole('main', { hidden: true });
+
+    // when we mouse enter or mouse leave on card component, we can check if the about class component is visible or hidden
+    fireEvent.mouseEnter(screen.getByLabelText(/enter about class/i));
+
+    // check if the about class is visible
+    expect(aboutClass.getAttribute('aria-hidden')).toBe('false');
+    expect(aboutClass).toHaveStyle({ opacity: 1 });
+    expect(aboutClass).toHaveStyle({ visibility: 'visible' });
+
+    // check if the about class is hidden
+    fireEvent.mouseLeave(screen.getByLabelText(/enter about class/i));
+    expect(aboutClass.getAttribute('aria-hidden')).toBe('true');
+    expect(aboutClass).toHaveStyle({ opacity: 0 });
+    expect(aboutClass).toHaveStyle({ visibility: 'hidden' });
+  });
+
   it('should render the card component with course informations', () => {
     const { getByText } = render(<Card course={course} />);
 

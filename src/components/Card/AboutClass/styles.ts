@@ -7,7 +7,7 @@ interface IContentProps {
   contentHeight?: number;
 }
 
-export const Container = styled.div<IContainerProps>`
+export const Container = styled.main<IContainerProps>`
   width: 100%;
   position: relative;
   transition: all 0.5s;

@@ -46,7 +46,10 @@ const AboutClass: React.FC<IAboutClassProps> = ({
   }, [aboutClassDownActive, contentHeight]);
 
   return (
-    <Container aboutClassActive={aboutClassActive}>
+    <Container
+      aria-hidden={!aboutClassActive}
+      aboutClassActive={aboutClassActive}
+    >
       <Title>
         <p>Sobre as aulas</p>
         {aboutClassDownActive ? (

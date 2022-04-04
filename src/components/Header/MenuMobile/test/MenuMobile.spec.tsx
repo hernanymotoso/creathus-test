@@ -26,8 +26,8 @@ describe('MenuMobile component', () => {
     render(<MenuMobile menuItens={menuItens} />);
 
     //  Select the MenuMobile
-    const menuMobile = screen.getByRole('navigation', { hidden: true });
 
+    const menuMobile = screen.getByRole('navigation', { hidden: true });
     // Verify if menu is hidden
     expect(menuMobile.getAttribute('aria-hidden')).toBe('true');
     expect(menuMobile).toHaveStyle({ opacity: 0 });
