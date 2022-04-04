@@ -14,6 +14,10 @@ export const Container = styled.div`
   /* width: 0px; */
   > svg {
     cursor: pointer;
+    color: #004098;
+    &:hover {
+      color: ${shade(0.2, '#004098')};
+    }
   }
 
   @media screen and (max-width: 560px) {
