@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import Header from '../index';
 
@@ -23,10 +23,17 @@ describe('Header component', () => {
       },
     ];
 
-    const { getByText } = render(<Header menuItens={menuItens} />);
+    render(<Header menuItens={menuItens} />);
 
-    // expect(getByText('Trilhas')).toBeInTheDocument();
-    // expect(getByText('Cursos')).toBeInTheDocument();
-    // expect(getByText('Agenda')).toBeInTheDocument();
+    // if have logo
+    expect(screen.getByLabelText(/logo/i)).toBeInTheDocument();
+
+    // if have mavigation menu
+    expect(screen.getByLabelText(/navigation menu/i)).toBeInTheDocument();
+
+    // if have action to enter or register in app
+    expect(
+      screen.getByLabelText(/actions to enter in app/i),
+    ).toBeInTheDocument();
   });
 });

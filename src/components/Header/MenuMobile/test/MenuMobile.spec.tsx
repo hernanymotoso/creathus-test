@@ -35,14 +35,14 @@ describe('MenuMobile component', () => {
     expect(menuMobile).toHaveStyle({ right: '-400px' });
     // expect(menuMobile).toHaveStyle({ display: 'none' });
 
-    // Click on open button to ferify if it open
+    // Click on open button to verify if it open
     fireEvent.click(screen.getByLabelText(/open menu/i));
     expect(menuMobile.getAttribute('aria-hidden')).toBe('false');
     expect(menuMobile).toHaveStyle({ opacity: 1 });
     expect(menuMobile).toHaveStyle({ visibility: 'visible' });
     expect(menuMobile).toHaveStyle({ right: '-20px' });
 
-    // Click on open button to ferify if it close
+    // Click on open button to verify if it close
     fireEvent.click(screen.getByLabelText(/close menu/i));
     expect(menuMobile.getAttribute('aria-hidden')).toBe('true');
     expect(menuMobile).toHaveStyle({ opacity: 0 });

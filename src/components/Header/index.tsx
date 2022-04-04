@@ -12,21 +12,21 @@ const Header: React.FC<IHeaderProps> = ({ menuItens }) => {
   console.log();
 
   return (
-    <Container>
+    <Container aria-label="Header">
       <Center>
-        <img src={oceanLogo} alt="logo" />
-        <Nav>
+        <img aria-label="Logo" src={oceanLogo} alt="Logo" />
+        <Nav aria-label="Navigation Menu">
           {menuItens?.map(iten => (
             <li key={iten.id}>
               <a href={iten.path}>{iten.name}</a>
             </li>
           ))}
         </Nav>
-        <span>
+        <span aria-label="Actions To Enter In App">
           <strong>Entrar / </strong>
           <strong>Cadastrar</strong>
         </span>
-        <MenuMobile menuItens={menuItens} />
+        <MenuMobile aria-label="Menu Mobile" menuItens={menuItens} />
       </Center>
     </Container>
   );
