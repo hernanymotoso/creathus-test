@@ -11,7 +11,7 @@ Foi construído uma interface intuitiva e responsiva com ReactJS e TypeScript, u
 
 ![creathusscreen](https://user-images.githubusercontent.com/28400751/161673677-1f44bfa9-9329-48f9-bc27-e0e4a57c2222.png)
 
-[Veja em produção](https://creathus.hernanymotoso.com.br/)
+[Veja online em produção](https://creathus.hernanymotoso.com.br/)
 
 
 ## Tecnologias utilizadas
