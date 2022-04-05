@@ -93,7 +93,7 @@ const Home: React.FC = () => {
     <>
       <Header menuItens={menuItens} />
       <Container id="ddContainer">
-        <h1>Cursos</h1>
+        <h1>Cursos Hernany</h1>
         {currentcourses.length === 0 ? (
           <CircularProgress />
         ) : (
