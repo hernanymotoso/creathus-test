@@ -1,0 +1,576 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "2",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "3",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "4",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "5",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "6",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "7",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "8",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "9",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "10",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "11",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "12",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "13",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "14",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "15",
+      "track": "Android",
+      "title": "WebServices com Retrofit e Imagens Glide",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endDate": "2022-05-12T03:00:00.000Z",
+      "campus": "Campus de Manaus",
+      "speakers": [
+        "Paulo Salvatore",
+        "Maria da Bahia",
+        "João do Pedregulho"
+      ],
+      "enrollmentsStart": "2022-04-30T03:00:00.000Z",
+      "detailsURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "courseId": "15",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "2",
+      "courseId": "15",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "3",
+      "courseId": "15",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "4",
+      "courseId": "14",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "5",
+      "courseId": "14",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "6",
+      "courseId": "14",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "7",
+      "courseId": "13",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "8",
+      "courseId": "13",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "9",
+      "courseId": "13",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "10",
+      "courseId": "12",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "11",
+      "courseId": "12",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "12",
+      "courseId": "12",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "13",
+      "courseId": "11",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "14",
+      "courseId": "11",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "15",
+      "courseId": "11",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "16",
+      "courseId": "10",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "17",
+      "courseId": "10",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "18",
+      "courseId": "10",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "19",
+      "courseId": "9",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "20",
+      "courseId": "9",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "21",
+      "courseId": "9",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "22",
+      "courseId": "8",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "23",
+      "courseId": "8",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "24",
+      "courseId": "8",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "25",
+      "courseId": "7",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "26",
+      "courseId": "7",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "27",
+      "courseId": "7",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "28",
+      "courseId": "6",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "29",
+      "courseId": "6",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "30",
+      "courseId": "6",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "31",
+      "courseId": "5",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "32",
+      "courseId": "5",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "33",
+      "courseId": "5",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "34",
+      "courseId": "4",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "35",
+      "courseId": "4",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "36",
+      "courseId": "4",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "37",
+      "courseId": "3",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "38",
+      "courseId": "3",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "39",
+      "courseId": "3",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "40",
+      "courseId": "2",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "41",
+      "courseId": "2",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "42",
+      "courseId": "2",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    },
+    {
+      "id": "43",
+      "courseId": "1",
+      "title": "Parte 1",
+      "startTime": "2022-05-05T22:30:00.000Z",
+      "endTime": "2022-05-06T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "44",
+      "courseId": "1",
+      "title": "Parte 2",
+      "startTime": "2022-05-07T22:30:00.000Z",
+      "endTime": "2022-05-08T01:30:00.000Z",
+      "certificate": true
+    },
+    {
+      "id": "45",
+      "courseId": "1",
+      "title": "Sessão tira dúvidas",
+      "startTime": "2022-05-06T22:30:00.000Z",
+      "endTime": "2022-05-06T23:30:00.000Z"
+    }
+  ]
+}
