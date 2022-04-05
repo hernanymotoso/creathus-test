@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "start": "vite preview",
     "commit": "cz",
-    "test": "jest --watchAll"
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",
